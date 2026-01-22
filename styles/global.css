@@ -3,7 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
+
+:root {
   /* Brand Cores*/
   --brand-light: #59B2FF;
   --brand-mid: #3487CF;
@@ -46,4 +47,8 @@ body {
   --text-sm: 400 0.875rem/1 var(--font-family-opensans);
   --text-xs: 400 0.75rem/1 var(--font-family-opensans);
   
+}
+
+body {
+  overflow: hidden;
 }
