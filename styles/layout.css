@@ -8,16 +8,26 @@
   margin: 1.25rem;
 }
 
-main {
-  overflow: auto;
-  padding: 5rem;
-
-  & .main-container{
-    max-width: 35rem;
-    margin-left: auto;
-  }
-}
 /*main .main-container{}*/
+main {
+    
+    overflow: auto;
+    border-radius: 0.75rem;
+    padding: 5rem 8.125rem;
+    background-color: var(--shape-body);
+
+    & .main-container {
+        max-width: 51.25rem;
+        margin-inline: auto;
+
+        & h2 {
+            margin-bottom: 2.5rem;
+            font: var(--text-heading-md);
+        }
+    }
+}
+
+
 aside {
     background: url(../assets/Background.png) no-repeat center / cover;
     border-radius: 0.75rem;
