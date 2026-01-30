@@ -102,7 +102,7 @@
         }
 
         & label {
-            color: var(--text-heading-md);
+            color: var(--text-body);
             font: var(--text-heading-sm);
 
             & strong {

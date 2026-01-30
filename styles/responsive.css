@@ -1,0 +1,84 @@
+@media (max-width: 1024px) {
+
+    body {
+        overflow: auto;
+    }
+
+    #app {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: auto;
+        overflow: visible;
+        margin: 1rem;
+    }
+
+    .aside-container {
+        max-width: 100%;
+        padding: 2rem;
+    }
+
+    main {
+        overflow: visible;
+        padding: 2.5rem 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    :root {
+        --text-heading-md: 700 1.5rem var(--font-family-opensans);
+        --text-heading-md: 0.875rem var(--font-family-opensans);
+        --text-heading-sm: 0.75rem var(--font-family-opensans);
+    }
+
+    aside {
+        background: url(../assets/Background_small.png) no-repeat left / cover;
+
+        & .aside-container {
+            & img {
+                height: 1.5rem;
+            }
+
+            & h1 {
+                font-size: 1.5rem;
+            }
+
+            & p {
+                max-width: 50%;
+                font-size: .8rem;
+            }
+        }
+
+    }
+
+    main {
+        padding: 2rem 1.5rem;
+    }
+
+    .main-container h2 {
+        margin-bottom: 2rem;
+    }
+
+    .flex.gap-16 {
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .color-wrapper {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .upload-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        gap: 1rem;
+    }
+
+    .actions-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+}
