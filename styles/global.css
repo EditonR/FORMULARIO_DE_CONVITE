@@ -64,3 +64,19 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.flex {
+  display: flex;
+}
+
+.flex-1{
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.gap-16{
+  gap: 1rem;
+}

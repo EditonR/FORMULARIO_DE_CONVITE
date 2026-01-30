@@ -1,0 +1,116 @@
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    height: 3rem;
+
+    .button {
+        background-color: var(--input-base);
+        border: 1px solid var(--input-stroke);
+        width: 64px;
+        height: 32px;
+        padding: .25rem;
+        border-radius: 200px;
+        cursor: pointer;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            background-color: var(--input-stroke);
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            top: 50%;
+            left: 4px;
+            transform: translateY(-50%);
+            transition: left 0.3s ease-in-out;
+        }
+    }
+
+    #check:checked+.button {
+        background-color: var(--brand-light);
+    }
+
+    #check:checked+.button::before {
+        left: calc(100% - 24px - 4px);
+        background-color: var(--text-heading);
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    .mode-label {
+        margin-left: 8px;
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    #check:checked~.mode-label::before {
+        content: "Claro";
+    }
+
+    #check:not(:checked)~.mode-label::before {
+        content: "Escuro";
+    }
+}
+
+.terms-wrapper {
+    margin-top: 3rem;
+    padding-block: 2.5rem 3rem;
+    border-top: 1px solid var(--input-stroke);
+
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    & .terms-row {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.75rem;
+
+        & input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            padding: 0;
+            border-radius: .25rem;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            display: flex;
+            outline: none;
+            position: relative;
+
+            &:checked {
+                border: 2px solid var(--brand-light);
+            }
+
+            &:checked::before {
+                content: "";
+                position: absolute;
+                width: 14px;
+                height: 14px;
+                background: url("../../assets/icons/check.svg") no-repeat center center;
+                background-size: contain;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+        }
+
+        & label {
+            color: var(--text-heading-md);
+            font: var(--text-heading-sm);
+
+            & strong {
+                color: var(--brand-light);
+                font-weight: 600;
+                text-decoration: underline;
+            }
+        }
+    }
+
+}
