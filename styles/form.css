@@ -11,7 +11,7 @@ legend {
     align-items: center;
     gap: 0.75rem;
     margin-bottom: 1.5rem;
-    font: var(--heading-sm);
+    font: var(--text-sm);
     color: var(--text-heading);
 
     & img {
