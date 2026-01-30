@@ -77,4 +77,6 @@ input {
     &:valid+.error {
         display: none;
     }
+
+    
 }
